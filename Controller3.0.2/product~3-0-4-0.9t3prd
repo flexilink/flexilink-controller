@@ -1,0 +1,13 @@
+#62379.iec.ch::productfile:formatversion1
+
+product		= 0090A8 0001 03000400 00
+description	= AB019 standard software with passwords on AB010 Aubergine board
+
+dumpformat	= 0
+boot product	= product~3-0-0-0.9t3prd
+
+# logic file is the same as for 3.0.2.0
+# logic beta number updated as a kludge to get it rewritten with the new product code
+software 6 2	= logic-3-0-4-0~0-1-0-BETA-10.bit
+software 7 2	= VM-3-0-4-0~0-0-1-BETA-40.9t3bin
+

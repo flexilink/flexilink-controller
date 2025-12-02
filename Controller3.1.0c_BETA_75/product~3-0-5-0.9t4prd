@@ -1,0 +1,11 @@
+#62379.iec.ch::productfile:formatversion1
+
+product		= 0090A8 0001 03000500 00
+description	= AB021 standard software for Aubergine with VM4
+
+dumpformat	= 0
+boot product	= product~3-0-0-0.9t3prd
+
+software 6 2	= logic-3-0-5-0~0-1-0-BETA-16.bit
+software 7 2	= VM-3-0-5-0~0-0-1-BETA-75.9t4bin
+
