@@ -1,0 +1,4 @@
+                                   ---------- cache access ----------- ---- register 1 ---- -- register 2 -- --- reg 3 -- r ---------------------------------------- ALU ----------------------------------------- ------------- PTRS -------------
+time   PC        c  imm data           ad    address from VM  fr cache upd      aa  value        aa  value        value   4  z value  z   y   x value  x  tqm    zx    ze b  flags y flgs x flg  xx    xe b  flags   z      x     s             adj fs  errors
+444 244444 A 144 2 144444444 JCHLT UQWH34 N2 344444e 44444444 44444444 W33 $$$ N22 44444444 $$$ N22 44444444 $$$ 44444444 F 44444444 LVA LVA 44444444 LVA 233EL F44 S NV4 14 WRFSE WRSLEV VN2NL V44 S NV4 14 WEHR2 SHSEN SHSEN2NL 2DNHUVXUDQVLR C33 2T TSLWFSUPT
+

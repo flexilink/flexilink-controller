@@ -1,0 +1,4 @@
+                                   -------- data cache access --------  ---- register 1 ---- -- register 2 -- -- register 3 -- r  ---------------------------------------- ALU ------------------------------------------  -PTRS-           -- pointers maps --
+time   PC    ROM c  imm data         a d   a address  wr data  rd data  upd     a address  b     a address  b     a address  b 4  z-value  z   y   x value  x  tqm   zxlen  ze  b z-flags yflags xflgs    xx  xe  b flags  rs    trap error    start     skip   err
+444 244444 A 144 2 144444444 JCHLT QW234 MN2 2444444 44444444 44444444  W33 $$$ e 2444444 14 $$$ e 2444444 14 $$$ e 2444444 14 F  4 44444 LVA LVA 44444444 LVA 233EL S V44 NV4 14 GNWRFSE WRSLEV VN2NL S V44 NV4 14 SEHR2  22 WQL 2I  TRWFS R 4444444 P E 34 VA T
+
