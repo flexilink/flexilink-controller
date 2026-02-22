@@ -1,0 +1,42 @@
+name: Build source zip
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "src-v*"
+
+permissions:
+  contents: write
+
+jobs:
+  zip:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create zip from ControllerSRC
+        run: |
+          ZIP_NAME="flexilink-controller-src.zip"
+          zip -r "$ZIP_NAME" ControllerSRC
+
+      - name: Resolve release tag
+        id: vars
+        run: |
+          if [[ "${GITHUB_REF}" == refs/tags/* ]]; then
+            echo "tag=${GITHUB_REF#refs/tags/}" >> "$GITHUB_OUTPUT"
+          else
+            echo "tag=src-manual-${GITHUB_RUN_NUMBER}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create GitHub release and upload zip
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.vars.outputs.tag }}
+          name: Source bundle ${{ steps.vars.outputs.tag }}
+          target_commitish: ${{ github.sha }}
+          files: flexilink-controller-src.zip
+          draft: false
+          prerelease: false
